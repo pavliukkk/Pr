@@ -8,6 +8,8 @@
    <!-- css -->
    <link rel='stylesheet' href='css/swiper-bundle.min.css'>
    <link rel='stylesheet' href='css/style.css'>
+   <link rel='stylesheet' href='css/_dropdown.scss'>
+   <link rel='stylesheet' href='css/_reservation.scss'>
    <!-- <link rel='stylesheet' href='css/style.min.css'> -->
    <!-- Title -->
    <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
@@ -57,11 +59,11 @@
                   <div class="nav__menu">
                      <ul class="nav__list">
                         <li><a href="index.html" class="nav__list-link">Home</a></li>
-                        <li><a href="menu.html" class="nav__list-link">Menu</a></li>
-                        <li><a href="blog.html" class="nav__list-link">Blogs</a></li>
-                        <li><a href="about.html" class="nav__list-link">About</a></li>
-                        <li><a href="contact.html" class="nav__list-link">Contact</a></li>
-                        <li class="hide"><a href="soon.html" class="nav__list-link">Reservations</a></li>
+                        <li><a href="" class="nav__list-link">Menu</a></li>
+                        <li><a href="" class="nav__list-link">Blogs</a></li>
+                        <li><a href="" class="nav__list-link">About</a></li>
+                        <li><a href="" class="nav__list-link">Contact</a></li>
+                        <li class="hide"><a href="" class="nav__list-link">Reservations</a></li>
                      </ul>
                      <div class="nav__info">
                         <div class="nav__info-title subtitle-big">Contact</div>
@@ -229,11 +231,23 @@
                <div class="reservation">
                   <div class="title-big">Make a Reservation</div>
                   <div class="text">Get in touch with restaurant</div>
-                  <form action="#" class="reservation__form"> 
-                     <input type="text" class="reservation__form-input text"
-                        value="2021-02-16" onfocus="(this.type='date')" onblur="(this.type='text')"> 
+                  <form action="#"> 
+                     <div class="reservation__form-inputs">
+                     <input type="date" class="reservation__form-input text"
+                        value="2023-09-01" onfocus="(this.type='date')"> 
                         <input type="time" class="reservation__form-input text" value="18:00"> 
-                        <input type="text" class="reservation__form-input reservation__form-input-text text" placeholder="2 Person">
+                        <div class="dropdown">
+                           <input class="reservation__form-input reservation__form-input-text text" type="text" name="people" value="1 Person" readonly="readonly"> 
+                           <ul class="dropdown-options visually-hidden">
+                              <li class="dropdown-options__item dropdown-options__item--active" data-option="1 Person">1 Person</li>
+                              <li class="dropdown-options__item" data-option="2 People">2 People</li>
+                              <li class="dropdown-options__item" data-option="3 People">3 People</li>
+                              <li class="dropdown-options__item" data-option="4 People">4 People</li>
+                              <li class="dropdown-options__item" data-option="5 People">5 People</li>
+                              <li class="dropdown-options__item" data-option="6 People">6 People</li>
+                           </ul>
+                        </div>
+                     </div>
                      <button class="reservation__form-btn subtitle-big" type="submit">Book Now</button> 
                   </form>
                </div>
@@ -344,6 +358,7 @@
    <!-- JS -->
    <script src="js/swiper-bundle.min.js"></script>
    <script src="js/main.min.js"></script>
+   <script src="js/dropdown.js"></script>
 </body>
 
 </html>
