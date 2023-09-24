@@ -177,6 +177,21 @@ body .overlay{
 a{
 	text-decoration:none
 }
+.footer__text.subtext a, .nav__info-text.subtext a{
+	color:#fff
+}
+.footer__text.subtext a:active, .nav__info-text.subtext a:active{
+	color:#fff;
+	text-decoration:none
+}
+.footer__text.subtext a:visited, .nav__info-text.subtext a:visited{
+	color:#fff;
+	text-decoration:none
+}
+.footer__text.subtext a:hover, .nav__info-text.subtext a:hover{
+	color:#fff;
+	text-decoration: none
+}
 h1,h2,h4,p,span{
 	margin:0;
 	padding:0
